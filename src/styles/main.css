@@ -1,0 +1,151 @@
+main {
+  margin: 100px auto;
+}
+
+/* Food Menu */
+
+.foods {
+  margin-bottom: 125px;
+}
+
+.restaurants h2,
+.foods h2 {
+  margin-bottom: 40px;
+}
+
+.foods > .cards,
+.restaurants > .cards {
+  gap: 15px 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.foods > .cards {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.empty {
+  text-align: center;
+}
+
+.empty span {
+  display: block;
+}
+
+.empty a {
+  background-color: var(--second-colour);
+  color: var(--fourth-colour);
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+resto-card,
+food-card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+food-card {
+  max-width: 200px;
+  width: 90%;
+  display: block;
+}
+
+food-card .skeleton {
+  width: 100%;
+  height: 150px;
+  background-color: lightgray;
+}
+
+food-card .card-info {
+  margin: 1rem;
+}
+
+.card-info i {
+  color: #FFD27D;
+}
+
+/* Restaurant Menu */
+
+resto-card {
+  width: 300px;
+  position: relative;
+  display: block;
+}
+
+resto-card a {
+  display: block;
+  text-decoration: none;
+  padding: 0;
+  color: black;
+}
+
+resto-card .city {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  background-color: var(--fourth-colour);
+  top: 5px;
+  left: 5px;
+  border-radius: 5px;
+}
+
+resto-card .city i {
+  color: red;
+}
+
+resto-card .city span {
+  display: inline-block;
+  margin-left: 0.3rem;
+}
+
+resto-card .skeleton {
+  background-color: lightgray;
+  height: 200px;
+}
+
+resto-card img,
+food-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+resto-card .card-info {
+  padding: 1rem;
+}
+
+resto-card .rating span {
+  display: inline-block;
+  margin-left: 0.3rem;
+  font-size: 1rem;
+}
+
+resto-card .card-info .name {
+  margin: 1rem auto;
+}
+
+resto-card .card-info .desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  margin-bottom: 1rem;
+}
+
+footer {
+  padding: 1rem;
+  background-color: var(--third-colour);
+  color: var(--contrast-colour)
+}
+
+@media screen and (max-width: 280px) {
+  resto-card .skeleton {
+    height: 150px;
+  }
+}
